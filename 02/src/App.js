@@ -12,7 +12,7 @@ function App() {
   function toggleMode() {
     if (darkMode === 'light') {
       setDarkMode('dark')
-      document.body.style.backgroundColor = 'black';
+      document.body.style.backgroundColor = 'grey';
     }
     else {
       setDarkMode('light');
