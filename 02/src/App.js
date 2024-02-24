@@ -6,7 +6,7 @@ import Navba from './components/Navba';
 function App() {
   return (
     <div>
-      <Navba title="TextUtils" />
+      <Navba title={"TextUtils"} about="About Us" />
     </div>
   );
 }
