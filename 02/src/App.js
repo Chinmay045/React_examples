@@ -2,6 +2,7 @@
 import './App.css';
 import Navba from './components/Navba';
 import TextForm from './components/TextForm';
+import About from './components/About';
 
 
 function App() {
@@ -9,7 +10,10 @@ function App() {
     <div>
       <Navba title={"TextUtils"} about="About Us" />
       <div className="container">
-        <TextForm heading={"Enter the text to analyze"} />
+        {/* <TextForm heading={"Enter the text to analyze"} /> */}
+      </div>
+      <div className="container">
+        <About />
       </div>
     </div>
   );
