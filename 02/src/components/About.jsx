@@ -6,30 +6,36 @@ function About() {
 
     const [myStyle, setMyStyle] = useState({
         color: "yellow",
-        backgroundColor: "black"
+        backgroundColor: "black",
+       
     })
+
+    const [btnText, setBtnNext] = useState("");
 
     function toggleStyleHandler() {
         if (myStyle.color === "yellow") {
             setMyStyle({
                 color: "red",
-                backgroundColor: "white"
+                backgroundColor: "white",
+                border:'1px solid white'
             })
+            setBtnNext("Enable Dark Mode")
         }
         else {
             setMyStyle({
                 color: "yellow",
                 backgroundColor: "black"
             })
+            setBtnNext("Enable Light Mode")
         }
     }
 
 
     return (
         <div className='container' style={myStyle} >
-            <Accordion defaultActiveKey="0"  >
-                <Accordion.Item eventKey="0" >
-                    <h1 className='my-3'>About Us</h1>
+            <Accordion defaultActiveKey="0" style={myStyle} >
+                <Accordion.Item eventKey="0" style={myStyle}>
+                    <h1 className='my-3 mx-2' style={myStyle}>About Us</h1>
                     <Accordion.Header >Accordion Item #1</Accordion.Header>
                     <Accordion.Body style={myStyle}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -55,7 +61,7 @@ function About() {
                 </Accordion.Item>
             </Accordion>
             <div className="container">
-                <Button variant="primary my-3" onClick={toggleStyleHandler} >Enable Dark Mode</Button>{' '}
+                <Button variant="primary my-3" onClick={toggleStyleHandler} >{btnText}</Button>{' '}
             </div>
 
         </div>
