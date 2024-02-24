@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 function Navba(props) {
     return (
         <div>
-            <Navbar expand="lg" className="bg-body-tertiary">
+            <Navbar expand="lg" className=" navbar-dark bg-dark">
                 <Container>
                     <Navbar.Brand href="#home">{props.title}</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
