@@ -11,10 +11,13 @@ function App() {
 
   function toggleMode() {
     if (darkMode === 'light') {
-      setDarkMode ('dark')
+      setDarkMode('dark')
+      document.body.style.backgroundColor = 'black';
     }
     else {
-      setDarkMode ('light')
+      setDarkMode('light');
+      document.body.style.backgroundColor = 'white';
+
     }
   }
   return (
