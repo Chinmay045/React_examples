@@ -1,18 +1,36 @@
+import { useState } from 'react';
 import Accordion from 'react-bootstrap/Accordion';
 import Button from 'react-bootstrap/Button';
 
 function About() {
-    let myStyle = {
-        color:"yellow",
-        backgroundColor:"black"
 
+    const [myStyle, setMyStyle] = useState({
+        color: "yellow",
+        backgroundColor: "black"
+    })
+
+    function toggleStyleHandler() {
+        if (myStyle.color === "yellow") {
+            setMyStyle({
+                color: "red",
+                backgroundColor: "white"
+            })
+        }
+        else {
+            setMyStyle({
+                color: "yellow",
+                backgroundColor: "black"
+            })
+        }
     }
+
+
     return (
-        <div className='container' >
-            <Accordion defaultActiveKey="0" style={myStyle} >
-                <Accordion.Item eventKey="0" style={myStyle}>
+        <div className='container' style={myStyle} >
+            <Accordion defaultActiveKey="0"  >
+                <Accordion.Item eventKey="0" >
                     <h1 className='my-3'>About Us</h1>
-                    <Accordion.Header style={myStyle}>Accordion Item #1</Accordion.Header>
+                    <Accordion.Header >Accordion Item #1</Accordion.Header>
                     <Accordion.Body style={myStyle}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                         eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -23,7 +41,7 @@ function About() {
                         culpa qui officia deserunt mollit anim id est laborum.
                     </Accordion.Body>
                 </Accordion.Item>
-                <Accordion.Item eventKey="1"style={myStyle}>
+                <Accordion.Item eventKey="1" style={myStyle}>
                     <Accordion.Header>Accordion Item #2</Accordion.Header>
                     <Accordion.Body>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -37,7 +55,7 @@ function About() {
                 </Accordion.Item>
             </Accordion>
             <div className="container">
-                <Button variant="primary my-3">Enable Dark Mode</Button>{' '}
+                <Button variant="primary my-3" onClick={toggleStyleHandler} >Enable Dark Mode</Button>{' '}
             </div>
 
         </div>
