@@ -3,18 +3,19 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import PropTypes from 'prop-types';
 import Form from 'react-bootstrap/Form';
+// import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
 function Navba(props) {
     return (
         <div>
             <Navbar className={` navbar-${props.mode} bg-${props.mode} expand=lg`}>
                 <Container>
-                    <Navbar.Brand href="#home">{props.title}</Navbar.Brand>
+                    <Nav.Link className="nav-link" href="/">{props.title}</Nav.Link>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
-                            <Nav.Link href="#home">Home</Nav.Link>
-                            <Nav.Link href="#link">{props.about}</Nav.Link>
+                            <Nav.Link className="nav-link active" href="/">Home</Nav.Link>
+                            <Nav.Link className="nav-link" href="/about">{props.about}</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
