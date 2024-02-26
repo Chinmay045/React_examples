@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Accordion from 'react-bootstrap/Accordion';
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
 
 function About() {
 
@@ -61,7 +61,7 @@ function About() {
                 </Accordion.Item>
             </Accordion>
             <div className="container">
-                <Button variant="primary my-3" onClick={toggleStyleHandler} >{btnText}</Button>{' '}
+                {/* <Button variant="primary my-3" onClick={toggleStyleHandler} >{btnText}</Button>{' '} */}
             </div>
 
         </div>

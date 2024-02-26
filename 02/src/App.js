@@ -2,15 +2,15 @@
 import './App.css';
 import Navba from './components/Navba';
 import TextForm from './components/TextForm';
-// import About from './components/About';
+import About from './components/About';
 import Alerts from './components/Alerts.jsx';
 import { useState } from 'react';
 import React from "react";
-// import {
-//   BrowserRouter as Router,
-//   Switch,
-//   Route,
-// } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
 
 
 function App() {
@@ -42,18 +42,18 @@ function App() {
     }
   }
   return (
-    // <Router>
+    <Router>
     <div>
       <Navba title={"TextUtils"} about="About Us" mode={darkMode} toggleMode={toggleMode} />
       <Alerts alert={alert} />
       <div className="container">
-        {/* <Switch>
+        <Switch>
             <Route exact path="/about">
               <About />
             </Route>
             <Route exact path="/">
             </Route>
-          </Switch> */}
+          </Switch>
         <TextForm heading={"Enter the text to analyze"} />
 
       </div>
@@ -61,7 +61,7 @@ function App() {
         {/* <About /> */}
       </div>
     </div>
-    // </Router>
+    </Router>
   );
 }
 
